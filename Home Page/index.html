@@ -25,7 +25,7 @@
        <div class="header-btn">
         <button class="login-btn"><i class="fa-solid fa-right-to-bracket"></i>Login</button>
         <button class="register-btn"><i class="fa-solid fa-user-plus"></i>Register</button>
-        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i>Cart</button>
+        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart-count">0</span>)</button>
        </div>
     </header>
     <!------Header Section Starts Here---------->
@@ -54,8 +54,15 @@
             <button class="jewelery">Jewelery</button>
             <button class="electronics">Electronics</button>
         </div>
-
+        
      </section>
 
+     <div id="products-container"></div>
+
+   <section class="cart-section">
+        <div id="cart-items"></div>
+    </section>
+
+     <script src="../app.js"></script>
 </body>
 </html>
