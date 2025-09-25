@@ -125,3 +125,70 @@ header {
         font-size: 15px;
     }
 }
+
+
+.background-image {
+    background-image: url(./assets/main.png.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 140px;
+    left: 10px;
+}
+
+.img-text h1 {
+    font-size: 45px;
+    color: white;
+}
+
+.img-text p {
+    font-size: 25px;
+    color: white;
+    font-style: inherit;
+}
+
+@media (max-width: 768px) {
+    .background-image {
+        height: 300px;
+    }
+
+    .img-text {
+        bottom: 80px;
+        left: 20px;
+        text-align: left;
+    }
+
+    .img-text h1 {
+        font-size: 32px;
+    }
+
+    .img-text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-image {
+        height: 250px;
+    }
+
+    .img-text {
+        bottom: 50px;
+        left: 10px;
+        text-align: left;
+    }
+
+    .img-text h1 {
+        font-size: 24px;
+    }
+
+    .img-text p {
+        font-size: 14px;
+    }
+}
