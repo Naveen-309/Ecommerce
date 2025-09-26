@@ -23,11 +23,13 @@ const displayProducts = (products) => {
         div.classList.add("product-card");
         div.innerHTML = `
             <img src="${product.image}" alt="${product.title}">
-            <h3>${product.title.slice(0, 20)}...</h3>
-            <p>${product.description.slice(0, 60)}...</p>
+            <h3>${product.title.slice(0, 15)}...</h3>
+            <p>${product.description.slice(0, 150)}...</p>
             <p class="price">$ ${product.price}</p>
+            <div class="buttons">
             <button class="details-btn">Details</button>
             <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
         `;
 
         div.querySelector(".add-to-cart-btn").addEventListener("click", () => addToCart(product));
