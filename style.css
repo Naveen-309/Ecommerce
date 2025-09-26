@@ -291,8 +291,8 @@ header {
 #products-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 30px;
+    gap: 10px;
+    margin-left: 80px;
 }
 
 .product-card {
