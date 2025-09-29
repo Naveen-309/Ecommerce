@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    
-<!-----Header Section Starts Here ------>
+    <!-----Header Section Starts Here ------>
     <header>
        <div class="header-logo">
         <h1>Ecommerce</h1>
@@ -29,28 +28,29 @@
     </header>
     <!------Header Section Starts Here---------->
 
-         <section class="latest-products">
-
-            <h1>Latest Products</h1>
+      <section class="contact-us-section">
+        <h1 style="margin-top: 30px;">Contact Us</h1>
         <hr>
-
-        <div class="latest-btn">
-            <button class="all">All</button>
-            <button class="mens">Men's Clothing</button>
-            <button class="womens">Women's Clothing</button>
-            <button class="jewelery">Jewelery</button>
-            <button class="electronics">Electronics</button>
-        </div>
-        
-     </section>
-
-     <div id="products-container"></div>
-
-   <section class="cart-section">
-        <div id="cart-items"></div>
     </section>
 
-   <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of <strong>AchieversIT</strong></p>
-    <script src="/app.js"></script>
+    <form class="contact-form" action="#">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="name@example.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Enter your message"></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+
+
+       <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of<strong>AchieversIT</strong></p>
+
+
+
+    <script src="../app.js"></script>
 </body>
 </html>
