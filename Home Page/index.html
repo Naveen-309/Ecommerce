@@ -42,28 +42,62 @@
 
      <!------Latest Product Starts Here -------->
 
-     <section class="latest-products">
+     <section>
 
-            <h1>Latest Products</h1>
-        <hr>
-
-        <div class="latest-btn">
-            <button class="all">All</button>
-            <button class="mens">Men's Clothing</button>
-            <button class="womens">Women's Clothing</button>
-            <button class="jewelery">Jewelery</button>
-            <button class="electronics">Electronics</button>
+        <div class="latest-products">
+            <p>Latest Products</p>
+            <hr>
         </div>
-        
-     </section>
 
-     <div id="products-container"></div>
+       
 
-   <section class="cart-section">
-        <div id="cart-items"></div>
+        <div class="products-category-buttons">
+            <button class="category-all-btn">All</button>
+            <button class="category-mens-btn">Men's Clothing</button>
+            <button class="category-womens-btn">Women's Clothing</button>
+            <button class="category-jewelery-btn">Jewelery</button>
+            <button class="category-electronics-btn">Electronics</button>
+
+        </div>
+
     </section>
 
-   <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of <strong>AchieversIT</strong></p>
-     <script src="../app.js"></script>
+    <div id="products-container"></div>
+
+    <div id="cart-page" style="display:none;">
+        <h2 class="cart-heading">Cart</h2>
+        <hr>
+        <div id="empty-cart-message" style="display:none;">
+            <p>Your Cart is Empty</p>
+            <button onclick="continueShopping()"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</button>
+        </div>
+        <div class="cart-layout">
+            <div id="cart-items" class="cart-items"></div>
+            <div id="order-summary" class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Products (<span id="summary-count">0</span>)</span>
+                    <span>$<span id="summary-products">0</span></span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>$<span id="summary-shipping">0</span></span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <strong>Total amount</strong>
+                    <strong>$<span id="summary-total">0</span></strong>
+                </div>
+                <button class="checkout-btn">Go to checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance
+        of<strong>AchieversIT</strong></p>
+    <script src="../app.js"></script>
 </body>
 </html>
