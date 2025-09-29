@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Ecommerce</title>
     <link rel="stylesheet" href="../style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-----Header Section Starts Here ------>
-    <header>
+     <header>
        <div class="header-logo">
         <h1>Ecommerce</h1>
        </div>
@@ -27,31 +26,33 @@
         <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart-count">0</span>)</button>
        </div>
     </header>
-    <!------Header Section Starts Here---------->
 
-      <section class="contact-us-section">
-        <h1 style="margin-top: 30px;">Contact Us</h1>
+     <div class="header-buttons">
+            <button class="login-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            <button class="register-btn"><i class="fa-solid fa-user-plus"></i> Register</button>
+            <button id="cart-btn"><i class="fa-solid fa-cart-shopping"></i> cart (<span id="cart-count">0</span>)</button>
+
+        </div>
+    </header>
+
+    <div class="login-container">
+        <h1 style="margin-top: 30px;">Login</h1>
         <hr>
-    </section>
 
-    <form class="contact-form" action="#">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter your name">
+        <form>
+            <label for="email">Email address</label>
+            <input type="email" id="email" placeholder="name@example.com">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="name@example.com">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
 
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Enter your message"></textarea>
+            <p>New Here? <a href="/register.html">Register</a></p>
 
-        <button type="submit">Send</button>
-    </form>
+            <button type="submit" class="submit-login">Login</button>
+        </form>
+    </div>
 
-
-       <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of<strong>AchieversIT</strong></p>
-
-
-
-    <script src="../app.js"></script>
+      <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of<strong>AchieversIT</strong></p>
+      <script src="/app.js"></script>
 </body>
 </html>
