@@ -51,6 +51,7 @@ const addToCart = (product) => {
 };
 
 const updateCartUI = () => {
+    if (!cartItemsContainer) return;
     cartItemsContainer.innerHTML = "";
     let totalCount = 0;
     let totalPrice = 0;
@@ -143,16 +144,20 @@ document.querySelector(".products-category-buttons").addEventListener("click", (
 fetchProducts();
 
 
-cartBtn.addEventListener("click", () => {
-    productsContainer.style.display = "none";
-    document.querySelector(".products-category-buttons").style.display = "none";
-    document.querySelector(".latest-products").style.display = "none";
-    document.querySelector(".homepage-pic").style.display = "none";
+if (cartBtn) {
+  cartBtn.addEventListener("click", () => {
+    if (productsContainer) productsContainer.style.display = "none";
+    const categoryBtns = document.querySelector(".products-category-buttons");
+    if (categoryBtns) categoryBtns.style.display = "none";
+    const latestProducts = document.querySelector(".latest-products");
+    if (latestProducts) latestProducts.style.display = "none";
+    const homepagePic = document.querySelector(".homepage-pic");
+    if (homepagePic) homepagePic.style.display = "none";
 
-    cartPage.style.display = "block";
-
+    if (cartPage) cartPage.style.display = "block"; 
     updateCartUI();
-});
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginBtn = document.querySelector(".login-btn");
@@ -167,7 +172,5 @@ document.addEventListener("DOMContentLoaded", () => {
         registerBtn.addEventListener("click", () => {
             window.location.href = "/Register/index.html";
         });
-        
     }
 });
-
