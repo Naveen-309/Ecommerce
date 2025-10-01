@@ -1,77 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+    <title>Ecommerce-website</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <!-----Header Section Starts Here ------>
-    <header>
-       <div class="header-logo">
-        <h1>Ecommerce</h1>
-       </div>
 
-       <nav class="nav-bar">
-        <a href="../Home Page/index.html">Home</a>
-        <a href="../Product Page/index.html">Products</a>
-        <a href="../About Page/index.html">About</a>
-        <a href="../ContactUS/index.html">Contact</a>
-       </nav>
-       
-       <div class="header-btn">
-        <button class="login-btn"><i class="fa-solid fa-right-to-bracket"></i>Login</button>
-        <button class="register-btn"><i class="fa-solid fa-user-plus"></i>Register</button>
-        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart-count">0</span>)</button>
-       </div>
+<body>
+
+
+    <header>
+        <div class="logo">
+            <h1>Ecommerce</h1>
+        </div>
+
+        <nav class="nav-links">
+            <a href="/Home Page/index.html">Home</a>
+            <a href="/Product Page/index.html">Products</a>
+            <a href="/About Page/index.html">About</a>
+            <a href="/ContactUS/index.html">Contact</a>
+        </nav>
+        <div class="header-buttons">
+            <button class="login-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            <button class="register-btn"><i class="fa-solid fa-user-plus"></i> Register</button>
+            <button id="cart-btn"><i class="fa-solid fa-cart-shopping"></i> cart (<span id="cart-count">0</span>)</button>
+
+        </div>
     </header>
-    <!------Header Section Starts Here---------->
 
     <section class="about-section">
-    <h2>About Us</h2>
-    <hr>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere doloremque veritatis odit similique sequi.
-      Odit amet fuga nam quam quasi facilis sed doloremque saepe sint perspiciatis explicabo totam vero quas provident ipsam,
-      veritatis nostrum velit quos recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo earum unde eligendi autem praesentium,
-      doloremque distinctio nesciunt porro tempore quis eaque labore voluptatibus ea necessitatibus exercitationem tempora molestias.
-      Ad consequuntur veniam sequi ullam tempore vel tenetur soluta dolore sunt maxime aliquam corporis est, quo saepe dolorem optio minus sint nemo totam dolorum!
-      Reprehenderit delectus expedita a alias nam recusandae illo debitis repellat libero, quasi explicabo molestiae saepe, dolorem tempore itaque eveniet
-      quam dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum
-    </p>
-  </section>
+        <h2 style="margin-top: 30px;">About Us</h2>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere doloremque veritatis odit similique
+            sequi.
+            Odit amet fuga nam quam quasi facilis sed doloremque saepe sint perspiciatis explicabo totam vero quas
+            provident ipsam,
+            veritatis nostrum velit quos recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo earum
+            unde eligendi autem praesentium,
+            doloremque distinctio nesciunt porro tempore quis eaque labore voluptatibus ea necessitatibus exercitationem
+            tempora molestias.
+            Ad consequuntur veniam sequi ullam tempore vel tenetur soluta dolore sunt maxime aliquam corporis est, quo
+            saepe dolorem optio minus sint nemo totam dolorum!
+            Reprehenderit delectus expedita a alias nam recusandae illo debitis repellat libero, quasi explicabo
+            molestiae saepe, dolorem tempore itaque eveniet
+            quam dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex nobis natus tempora nisi provident quo possimus. Excepturi aperiam fugit praesentium architecto esse odit in voluptates dolorum unde rem, dolore laborum. Voluptatibus quod, tenetur veritatis voluptatem officia tempore amet modi illum repudiandae dolorem, quidem id tempora, facilis quos fuga libero ipsa.
+        </p>
+    </section>
 
-  <section class="products-section">
-  <h2 class="products-title">Our Products</h2>
+    <section class="products-section">
+        <h2 class="products-title">Our Products</h2>
 
-  <div class="products-grid">
-    
-    <div class="product-card">
-      <img src="../assets/males.jpeg" alt="Men's Clothing" class="product-image">
-      <p class="product-name">Men's Clothing</p>
-    </div>
+        <div class="products-grid">
 
-    <div class="product-card">
-      <img src="../assets/womensclothing.jpeg" alt="Women's Clothing" class="product-image">
-      <p class="product-name">Women's Clothing</p>
-    </div>
+            <div class="product-card">
+                <img src="/assets/males.jpeg" alt="Men's Clothing" class="product-image">
+                <p class="product-name">Men's Clothing</p>
+            </div>
 
-    <div class="product-card">
-      <img src="..//assets/jewelery.webp" alt="Jewelry" class="product-image">
-      <p class="product-name">Jewelry</p>
-    </div>
+            <div class="product-card">
+                <img src="/assets/womensclothing.jpeg" alt="Women's Clothing" class="product-image">
+                <p class="product-name">Women's Clothing</p>
+            </div>
 
-    <div class="product-card">
-      <img src="../assets/electronics.jpeg" alt="Electronics" class="product-image">
-      <p class="product-name">Electronics</p>
-    </div>
+            <div class="product-card">
+                <img src="/assets/jewelery.webp" alt="Jewelry" class="product-image">
+                <p class="product-name">Jewelry</p>
+            </div>
 
-  </div>
-</section>
+            <div class="product-card">
+                <img src="/assets/electronics.jpeg" alt="Electronics" class="product-image">
+                <p class="product-name">Electronics</p>
+            </div>
+
+        </div>
+    </section>
 
 
-<p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of <strong>AchieversIT</strong></p>
 
+    <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of<strong>AchieversIT</strong></p>
+
+
+
+    <script src="/app.js"></script>
 </body>
+
 </html>

@@ -5,7 +5,7 @@ const cartPage = document.getElementById("cart-page");
 const cartBtn = document.getElementById("cart-btn");
 
 let allProducts = [];
-let cart = {};
+let cart = {}
 
 const fetchProducts = async () => {
     try {
@@ -20,7 +20,6 @@ const fetchProducts = async () => {
 
 const displayProducts = (products) => {
     productsContainer.innerHTML = "";
-
     products.forEach((product) => {
         const div = document.createElement("div");
         div.classList.add("product-card");
@@ -30,8 +29,8 @@ const displayProducts = (products) => {
             <p>${product.description.slice(0, 150)}...</p>
             <p class="price">$ ${product.price}</p>
             <div class="buttons">
-                <button class="details-btn">Details</button>
-                <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="details-btn">Details</button>
+            <button class="add-to-cart-btn">Add to Cart</button>
             </div>
         `;
 
@@ -39,6 +38,8 @@ const displayProducts = (products) => {
         productsContainer.appendChild(div);
     });
 };
+
+
 
 const addToCart = (product) => {
     if (cart[product.id]) {
@@ -60,20 +61,22 @@ const updateCartUI = () => {
 
         const div = document.createElement("div");
         div.classList.add("cart-item");
+
         div.innerHTML = `
-            <div class="cart-item-info">
-                <img src="${item.image}" alt="${item.title}">
-                <span>${item.title}</span>
-            </div>
-            <div class="cart-item-details">
-                <div class="cart-item-quantity">
-                    <button class="decrease-btn">-</button>
-                    <span>${item.quantity}</span>
-                    <button class="increase-btn">+</button>
-                </div>
-                <p class="cart-item-total">${item.quantity} × $${item.price.toFixed(2)}</p>
-            </div>
-        `;
+    <div class="cart-item-info">
+        <img src="${item.image}" alt="${item.title}">
+        <span>${item.title}</span>
+    </div>
+    <div class="cart-item-details">
+        <div class="cart-item-quantity">
+            <button class="decrease-btn">-</button>
+            <span>${item.quantity}</span>
+            <button class="increase-btn">+</button>
+        </div>
+        <p class="cart-item-total">${item.quantity} × $${item.price.toFixed(2)}</p>
+    </div>
+`;
+
 
         div.querySelector(".decrease-btn").addEventListener("click", () => {
             if (cart[item.id].quantity > 1) {
@@ -84,6 +87,7 @@ const updateCartUI = () => {
             updateCartUI();
         });
 
+
         div.querySelector(".increase-btn").addEventListener("click", () => {
             cart[item.id].quantity += 1;
             updateCartUI();
@@ -92,83 +96,78 @@ const updateCartUI = () => {
         cartItemsContainer.appendChild(div);
     });
 
+
     cartCount.textContent = totalCount;
+
+
     document.getElementById("summary-count").textContent = totalCount;
     document.getElementById("summary-products").textContent = totalPrice.toFixed(2);
-
     let shipping = totalPrice > 0 ? 30 : 0;
     document.getElementById("summary-shipping").textContent = shipping;
     document.getElementById("summary-total").textContent = (totalPrice + shipping).toFixed(2);
 
-    const emptyMsg = document.getElementById("empty-cart-message");
-    const cartLayout = document.querySelector(".cart-layout");
-
     if (totalCount === 0) {
-        emptyMsg.style.display = "block";
-        cartLayout.style.display = "none";
+        document.getElementById("empty-cart-message").style.display = "block";
+        document.querySelector(".cart-layout").style.display = "none";
     } else {
-        emptyMsg.style.display = "none";
-        cartLayout.style.display = "flex";
+        document.getElementById("empty-cart-message").style.display = "none";
+        document.querySelector(".cart-layout").style.display = "flex";
     }
+
 };
+
+
+
+
 
 document.querySelector(".products-category-buttons").addEventListener("click", (e) => {
     if (e.target.tagName !== "BUTTON") return;
 
-    const category = e.target.className;
-
-    if (category.includes("category-all-btn")) {
+    if (e.target.classList.contains("category-all-btn")) {
         displayProducts(allProducts);
-    } else if (category.includes("category-mens-btn")) {
+    }
+    else if (e.target.classList.contains("category-mens-btn")) {
         displayProducts(allProducts.filter(p => p.category === "men's clothing"));
-    } else if (category.includes("category-womens-btn")) {
+    }
+    else if (e.target.classList.contains("category-womens-btn")) {
         displayProducts(allProducts.filter(p => p.category === "women's clothing"));
-    } else if (category.includes("category-jewelery-btn")) {
+    }
+    else if (e.target.classList.contains("category-jewelery-btn")) {
         displayProducts(allProducts.filter(p => p.category === "jewelery"));
-    } else if (category.includes("category-electronics-btn")) {
+    }
+    else if (e.target.classList.contains("category-electronics-btn")) {
         displayProducts(allProducts.filter(p => p.category === "electronics"));
     }
 });
 
-if (cartBtn) {
-    cartBtn.addEventListener("click", () => {
-        productsContainer.style.display = "none";
-        document.querySelector(".products-category-buttons").style.display = "none";
-        document.querySelector(".latest-products").style.display = "none";
+fetchProducts();
 
-        const homepagePic = document.querySelector(".homepage-pic");
-        if (homepagePic) homepagePic.style.display = "none";
 
-        cartPage.style.display = "block";
-        updateCartUI();
-    });
-}
+cartBtn.addEventListener("click", () => {
+    productsContainer.style.display = "none";
+    document.querySelector(".products-category-buttons").style.display = "none";
+    document.querySelector(".latest-products").style.display = "none";
+    document.querySelector(".homepage-pic").style.display = "none";
+
+    cartPage.style.display = "block";
+
+    updateCartUI();
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginBtn = document.querySelector(".login-btn");
-    const registerBtn = document.querySelector(".register-btn");
-
     if (loginBtn) {
         loginBtn.addEventListener("click", () => {
-            window.location.href = "../Login Page/index.html";
+            window.location.href = "/login/index.html";
         });
     }
 
+    const registerBtn = document.querySelector(".register-btn");
     if (registerBtn) {
         registerBtn.addEventListener("click", () => {
-            window.location.href = "../Register Page/index.html";
+            window.location.href = "/Register/index.html";
         });
+        
     }
 });
 
-function continueShopping() {
-    cartPage.style.display = "none";
-    productsContainer.style.display = "flex";
-    document.querySelector(".products-category-buttons").style.display = "flex";
-    document.querySelector(".latest-products").style.display = "block";
-
-    const homepagePic = document.querySelector(".homepage-pic");
-    if (homepagePic) homepagePic.style.display = "block";
-}
-
-fetchProducts();

@@ -3,54 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Ecommerce-website</title>
     <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
-<!-----Header Section Starts Here ------>
-    <header>
-       <div class="header-logo">
-        <h1>Ecommerce</h1>
-       </div>
-
-       <nav class="nav-bar">
-        <a href="../Home Page/index.html">Home</a>
-        <a href="../Product Page/index.html">Products</a>
-        <a href="../About Page/index.html">About</a>
-        <a href="../ContactUS/index.html">Contact</a>
-       </nav>
-       
-       <div class="header-btn">
-        <button class="login-btn"><i class="fa-solid fa-right-to-bracket"></i>Login</button>
-        <button class="register-btn"><i class="fa-solid fa-user-plus"></i>Register</button>
-        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart-count">0</span>)</button>
-       </div>
-    </header>
-    <!------Header Section Starts Here---------->
-
-         <section class="latest-products">
-
-            <h1>Latest Products</h1>
-        <hr>
-
-        <div class="latest-btn">
-            <button class="all">All</button>
-            <button class="mens">Men's Clothing</button>
-            <button class="womens">Women's Clothing</button>
-            <button class="jewelery">Jewelery</button>
-            <button class="electronics">Electronics</button>
+     <header>
+        <div class="logo">
+            <h1>Ecommerce</h1>
         </div>
-        
-     </section>
 
-     <div id="products-container"></div>
+        <nav class="nav-links">
+            <a href="/Home Page/index.html" >Home</a>
+            <a href="/Product Page/">Products</a>
+            <a href="/About Page/index.html" >About</a>
+            <a href="/ContactUS/index.html">Contact</a>
+        </nav>
+        <div class="header-buttons">
+            <button class="login-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+           <button class="register-btn"><i class="fa-solid fa-user-plus"></i> Register</button>
+            <button id="cart-btn"><i class="fa-solid fa-cart-shopping"></i> cart (<span id="cart-count">0</span>)</button>
 
-   <section class="cart-section">
-        <div id="cart-items"></div>
+        </div>
+    </header>
+
+      <div class="latest-products" >
+            <p style="margin-top: 50px;">Latest Products</p>
+        </div>
+
+        <div class="products-category-buttons">
+            <button class="category-all-btn">All</button>
+            <button class="category-mens-btn">Men's Clothing</button>
+            <button class="category-womens-btn">Women's Clothing</button>
+            <button class="category-jewelery-btn">Jewelery</button>
+            <button class="category-electronics-btn">Electronics</button>
+
+        </div>
+      
+
     </section>
 
-   <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of <strong>AchieversIT</strong></p>
+     <div id="products-container"></div>
+  
+    <div id="cart-page" style="display:none;">
+        <h2 class="cart-heading">Cart</h2>
+        <hr>
+        <div id="empty-cart-message" style="display:none;">
+            <p>Your Cart is Empty</p>
+            <button onclick="continueShopping()"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</button>
+        </div>
+        <div class="cart-layout">
+            <div id="cart-items" class="cart-items"></div>
+            <div id="order-summary" class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Products (<span id="summary-count">0</span>)</span>
+                    <span>$<span id="summary-products">0</span></span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>$<span id="summary-shipping">0</span></span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <strong>Total amount</strong>
+                    <strong>$<span id="summary-total">0</span></strong>
+                </div>
+                <button class="checkout-btn">Go to checkout</button>
+            </div>
+        </div>
+    </div>
+         
+
+
+    <p class="footer-caption">Made with <span>&#10084;&#65039;</span> by Kalyanam Naveen with the guidance of<strong>AchieversIT</strong></p>
+
+
+
     <script src="/app.js"></script>
 </body>
 </html>
